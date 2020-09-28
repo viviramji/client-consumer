@@ -56,7 +56,6 @@ def create_app(test_config=None):
         """
         Obtiene todos los estudiantes
         """
-        print(jsonify(studentsDB))
         return render_template('students/students.html', students=studentsDB)
         # return jsonify({'students': studentsDB})
 
@@ -66,7 +65,6 @@ def create_app(test_config=None):
         Obtiene un estudiante
         """
         user = [std for std in studentsDB if (std['id'] == stdId)]
-        print(user)
         return render_template('students/student.html', student=user[0])
         # return jsonify({'est': usr})
 
@@ -85,7 +83,6 @@ def create_app(test_config=None):
         """ 
         Crea un estudiante
         """
-        print('called create user')
         dat = {
             'id': request.form['id'],
             'name': request.form['name'],
@@ -99,7 +96,6 @@ def create_app(test_config=None):
         """ 
         Elimina un usuario
         """
-        print(stdId)
         row = [est for est in studentsDB if (est['id'] == stdId)]
         if len(row) == 0:
             os.abort(404)
