@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>Nuevo Estudiante</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+
+    <label for="id">ID</label>
+    <input name="id" id="id" value="" required>
+    
+    <label for="name">Nombre</label>
+    <input name="name" id="name" value="" required>
+    
+    <label for="name">Curso</label>
+    <input name="name" id="name" value="" required>
+    
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}
