@@ -7,7 +7,7 @@ $ py -3 -m venv my-venv
 ```
 
 ```shell
-$ venv\Scripts\activate  
+$ my-venv\Scripts\activate  
 ```
 
 ```shell
